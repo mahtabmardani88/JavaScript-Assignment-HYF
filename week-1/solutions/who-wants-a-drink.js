@@ -25,4 +25,4 @@ for (let i = 0 ; i<5 ; i++){
         }
     }
 }
-console.log(`${drinkTray.join(" , ")}`);
+console.log(`we want ${drinkTray.join(" , ")}`);
