@@ -19,3 +19,13 @@ for(let i = 1 ; i<=20 ; i++){
         console.log(i);
     }
 }
+
+
+// this is default hyf
+for (let i = 0; i < 21; i++) {
+    if (i % 2 == 0) {
+        console.log(`The number ${i} is even!`);
+    } else {
+        console.log(`The number ${i} is odd!`);
+    }
+}
