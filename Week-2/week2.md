@@ -29,30 +29,6 @@
   // [ '16.71', '16.68', '16.69', '16.66', '16.67', '16.59' ] 1000000
 
 
-```javascript
-function runExperiment(sampleSize) {
-  const valueCounts = [0, 0, 0, 0, 0, 0];//   we need 6 random number for each index of array
-  for (let i = 0 ; i < sampleSize ; i++ ){
-    let  random = Math.floor(Math.random() * 6);// until 0 -5 random number say
-    valueCounts[random]++;// read one by one
-  }
-  const results = [];
+---
 
- for(let i = 0 ; i < valueCounts.length ; i++){
-let percent = (valueCounts[i] / sampleSize ) * 100 ;  // calculator percent every 100%
-let formatPercent = percent.toFixed(2); // ToFixed means show us floor number 00.00
-results.push(formatPercent);
-
-  }
-  return results;
-}
-function main() {
-  const sampleSizes = [100, 1000, 1000000];
-
-  for(let key of sampleSizes){
-    let experimentResult = runExperiment(key);
-    console.log(experimentResult , key);
-  }
-}
-
-main();
+> [Home Page](../README.md)
