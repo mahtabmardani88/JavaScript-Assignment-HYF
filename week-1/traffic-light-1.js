@@ -8,9 +8,6 @@
 let trafficLight = {
   state: "green" ,
 };
-
-// TODO
-
 let rotations = 0;
 
 // iterate 2 time 
