@@ -4,6 +4,7 @@
 */
 
 const totalNumbers = [6, 7, 8, 6, 6, 6, 9];
+//  way 1
 function calculateSum(numbers){
    let sum = 0 ;
    for(let number of numbers){
@@ -13,8 +14,16 @@ return sum;
 }
 sum = calculateSum(totalNumbers);
 console.log(`${sum}`);
-// different way to write code
+// way 2      different way to write code
 console.log(totalNumbers.reduce((num1 , num2)=> num1 + num2 ));
+// wey 3      another way
+let sum1 = 0 ;
+for(let i = 0 ; i < totalNumbers.length ; i++){
+    sum1 += totalNumbers[i];
+} console.log(sum1);
+// way 4 
+let sum2 = totalNumbers.reduce((num1,num2)=> num1 + num2);
+console.log(sum2);
 // ===================================================================================================================
 /* 
     Exercise 2: Calculate the Average of Array Elements:
@@ -30,6 +39,11 @@ for(let numbers of number ){
 return sum / number.length;
 }
  console.log(average(averageNumbers));
+//  way 2
+let addNum = averageNumbers.reduce((num1 , num2)=> num1 + num2);
+let sumAddNum = addNum / averageNumbers.length ;
+let resultSumAddNum =Math.round(sumAddNum);
+console.log(resultSumAddNum);
 
 /*
     Exercise 3: Find the Largest Number in an Array:
