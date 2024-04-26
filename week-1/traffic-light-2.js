@@ -9,28 +9,21 @@ const trafficLight = {
   possibleStates: ["green", "orange", "red"],
   stateIndex: 0
 };
-// TODO
+
 let cycle = 0;
+// iterate 2 time while loop
 while (cycle < 2) {
-
-  // read one by one state index with possible state
-  trafficLight.stateIndex += 1;
-
-  //read every element in index with by possible states
-  // if the color is green, turn it orange
-  // if the color is orange, turn it red
-  // if the color is red, add 1 to cycles and turn it green
-  if (trafficLight.possibleStates.length === trafficLight.stateIndex) {
-
-    // when read 3 color should stop
-    trafficLight.stateIndex = 0;
-
-    // read again by while condition
-    cycle++;
-  }
-
   const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
   console.log("The traffic light is on", currentState);
+  
+  if(currentState === "green"){
+    trafficLight.stateIndex = 1;
+  } else if(currentState === "orange"){
+    trafficLight.stateIndex = 2;
+  } else if(currentState === "red"){
+    trafficLight.stateIndex = 0;
+    cycle++;
+  }
 }
 
 /**
